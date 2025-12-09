@@ -1,0 +1,90 @@
+openapi: 3.0.4
+info:
+  title: Marine Weather
+  description: Marine Weather is a simple tool for getting marine weather data. It returns the current weather conditions in coordinates within the ocean and sea.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/marineweather:
+    get:
+      summary: Get Marine Weather
+      description: Marine Weather is a simple tool for getting marine weather data. It returns the current weather conditions in coordinates within the ocean and sea.
+      operationId: marineweather
+      parameters:
+      - name: lat
+        in: query
+        schema:
+          type: number
+        required: true
+        description: The latitude coordinate of the location (e.g., 29.48003)
+        example: '29.48003'
+      - name: lon
+        in: query
+        schema:
+          type: number
+        required: true
+        description: The longitude coordinate of the location (e.g., -37.62424)
+        example: '-37.62424'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  location:
+                    lat: 29.48003
+                    lon: -37.62424
+                  weather:
+                    maxtempc: 26.1
+                    maxtempf: 79
+                    mintempc: 21.7
+                    mintempf: 71.1
+                    avgtempc: 25.4
+                    avgtempf: 77.8
+                    maxwindmph: 12
+                    maxwindkph: 19.3
+                    totalprecipmm: 2.36
+                    totalprecipin: 0.09
+                    totalsnowcm: 0
+                    avgviskm: 9.5
+                    avgvismiles: 5
+                    moonphase: New Moon
+                    moonillumination: 0
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
