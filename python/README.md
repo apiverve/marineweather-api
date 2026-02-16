@@ -44,7 +44,10 @@ from apiverve_marineweather.apiClient import MarineweatherAPIClient
 # Initialize the client with your APIVerve API key
 api = MarineweatherAPIClient("[YOUR_API_KEY]")
 
-query = { "lat": 29.48003, "lon": -37.62424 }
+query = {
+    "lat": 29.48003,
+    "lon": -37.62424
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "lat": 29.48003, "lon": -37.62424 }
+query = {
+    "lat": 29.48003,
+    "lon": -37.62424
+}
 ```
 
 ###### Simple Request
@@ -140,7 +146,10 @@ from apiverve_marineweather.apiClient import MarineweatherAPIClient, Marineweath
 
 api = MarineweatherAPIClient("[YOUR_API_KEY]")
 
-query = { "lat": 29.48003, "lon": -37.62424 }
+query = {
+    "lat": 29.48003,
+    "lon": -37.62424
+}
 
 try:
     result = api.execute(query)
@@ -161,7 +170,10 @@ from apiverve_marineweather.apiClient import MarineweatherAPIClient, Marineweath
 
 api = MarineweatherAPIClient("[YOUR_API_KEY]")
 
-query = { "lat": 29.48003, "lon": -37.62424 }
+query = {
+    "lat": 29.48003,
+    "lon": -37.62424
+}
 
 try:
     result = api.execute(query)
@@ -195,7 +207,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_marineweather.apiClient import MarineweatherAPIClient, MarineweatherAPIClientError
 
-query = { "lat": 29.48003, "lon": -37.62424 }
+query = {
+    "lat": 29.48003,
+    "lon": -37.62424
+}
 
 # Using context manager ensures proper cleanup
 with MarineweatherAPIClient("[YOUR_API_KEY]") as api:
@@ -221,7 +236,10 @@ from apiverve_marineweather.apiClient import MarineweatherAPIClient
 # Enable debug mode
 api = MarineweatherAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "lat": 29.48003, "lon": -37.62424 }
+query = {
+    "lat": 29.48003,
+    "lon": -37.62424
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -236,8 +254,12 @@ from apiverve_marineweather.apiClient import MarineweatherAPIClient
 
 api = MarineweatherAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "lat": 29.48003,
+    "lon": -37.62424
+}
+
 try:
-    query = { "lat": 29.48003, "lon": -37.62424 }
     result = api.execute(query)
     print(result)
 finally:
