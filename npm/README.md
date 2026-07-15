@@ -130,21 +130,21 @@ async function makeRequest() {
       "lon": -37.62424
     },
     "weather": {
-      "maxtempc": 26.1,
-      "maxtempf": 79,
-      "mintempc": 21.7,
-      "mintempf": 71.1,
-      "avgtempc": 25.4,
-      "avgtempf": 77.8,
-      "maxwindmph": 12,
-      "maxwindkph": 19.3,
-      "totalprecipmm": 2.36,
-      "totalprecipin": 0.09,
+      "maxtempc": 22.9,
+      "maxtempf": 73.2,
+      "mintempc": 21.8,
+      "mintempf": 71.2,
+      "avgtempc": 22.5,
+      "avgtempf": 72.5,
+      "maxwindmph": 11.1,
+      "maxwindkph": 17.9,
+      "totalprecipmm": 3.29,
+      "totalprecipin": 0.13,
       "totalsnowcm": 0,
-      "avgviskm": 9.5,
-      "avgvismiles": 5,
-      "moonphase": "New Moon",
-      "moonillumination": 0
+      "avgviskm": 9.9,
+      "avgvismiles": 6,
+      "moonphase": "Waning Crescent",
+      "moonillumination": 16
     }
   }
 }
