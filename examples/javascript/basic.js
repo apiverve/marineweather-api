@@ -13,7 +13,13 @@ const API_URL = 'https://api.apiverve.com/v1/marineweather';
  */
 async function callMarineWeatherAPI() {
   try {
-    const response = await fetch(API_URL, {
+    // Query parameters
+    const params &#x3D; new URLSearchParams({
+            lat: 29.48003,
+            lon: -37.62424
+        });
+
+    const response = await fetch(`${API_URL}?${params}`, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
