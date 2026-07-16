@@ -25,6 +25,9 @@ namespace APIVerve.API.MarineWeather
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -39,57 +42,69 @@ namespace APIVerve.API.MarineWeather
     public partial class Location
     {
         [JsonProperty("lat")]
-        public double Lat { get; set; }
+        public double? Lat { get; set; }
 
         [JsonProperty("lon")]
-        public double Lon { get; set; }
+        public double? Lon { get; set; }
     }
 
     public partial class Weather
     {
         [JsonProperty("maxtempc")]
-        public double Maxtempc { get; set; }
+        public double? Maxtempc { get; set; }
 
         [JsonProperty("maxtempf")]
-        public long Maxtempf { get; set; }
+        public double? Maxtempf { get; set; }
 
         [JsonProperty("mintempc")]
-        public double Mintempc { get; set; }
+        public double? Mintempc { get; set; }
 
         [JsonProperty("mintempf")]
-        public double Mintempf { get; set; }
+        public double? Mintempf { get; set; }
 
         [JsonProperty("avgtempc")]
-        public double Avgtempc { get; set; }
+        public double? Avgtempc { get; set; }
 
         [JsonProperty("avgtempf")]
-        public double Avgtempf { get; set; }
+        public double? Avgtempf { get; set; }
 
         [JsonProperty("maxwindmph")]
-        public long Maxwindmph { get; set; }
+        public double? Maxwindmph { get; set; }
 
         [JsonProperty("maxwindkph")]
-        public double Maxwindkph { get; set; }
+        public double? Maxwindkph { get; set; }
 
         [JsonProperty("totalprecipmm")]
-        public double Totalprecipmm { get; set; }
+        public double? Totalprecipmm { get; set; }
 
         [JsonProperty("totalprecipin")]
-        public double Totalprecipin { get; set; }
+        public double? Totalprecipin { get; set; }
 
         [JsonProperty("totalsnowcm")]
-        public long Totalsnowcm { get; set; }
+        public long? Totalsnowcm { get; set; }
 
         [JsonProperty("avgviskm")]
-        public double Avgviskm { get; set; }
+        public double? Avgviskm { get; set; }
 
         [JsonProperty("avgvismiles")]
-        public long Avgvismiles { get; set; }
+        public long? Avgvismiles { get; set; }
 
         [JsonProperty("moonphase")]
         public string Moonphase { get; set; }
 
         [JsonProperty("moonillumination")]
-        public long Moonillumination { get; set; }
+        public long? Moonillumination { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
