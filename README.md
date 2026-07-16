@@ -192,11 +192,48 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Marine Weather API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "location": {
+      "lat": 29.48003,
+      "lon": -37.62424
+    },
+    "weather": {
+      "maxtempc": 22.9,
+      "maxtempf": 73.2,
+      "mintempc": 21.8,
+      "mintempf": 71.2,
+      "avgtempc": 22.5,
+      "avgtempf": 72.5,
+      "maxwindmph": 11.1,
+      "maxwindkph": 17.9,
+      "totalprecipmm": 3.29,
+      "totalprecipin": 0.13,
+      "totalsnowcm": 0,
+      "avgviskm": 9.9,
+      "avgvismiles": 6,
+      "moonphase": "Waning Crescent",
+      "moonillumination": 16
+    }
+  }
 }
 ```
 
