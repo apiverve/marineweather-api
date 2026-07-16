@@ -14,12 +14,12 @@ namespace APIVerve.API.MarineWeather
         /// The latitude coordinate of the location
         /// </summary>
         [JsonProperty("lat")]
-        public string Lat { get; set; }
+        public double Lat { get; set; }
 
         /// <summary>
         /// The longitude coordinate of the location
         /// </summary>
         [JsonProperty("lon")]
-        public string Lon { get; set; }
+        public double Lon { get; set; }
     }
 }
