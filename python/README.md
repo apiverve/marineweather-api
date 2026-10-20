@@ -1,13 +1,12 @@
 Marine Weather API
 ============
 
-Marine Weather is a simple tool for getting marine weather data. It returns the current weather conditions in coordinates within the ocean and sea.
+Marine Weather fetches offshore weather conditions for any marine coordinates by latitude and longitude. Each response details high and low temperatures, maximum wind speeds, precipitation totals, humidity, UV index, and sunrise and sunset times.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Marine Weather API](https://apiverve.com/marketplace/marineweather?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-marineweather.svg)](https://pypi.org/project/apiverve-marineweather/)
+
+This is a Python wrapper for the [Marine Weather API](https://apiverve.com/marketplace/marineweather?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-marineweather
 
 ## Configuration
 
-Before using the marineweather API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Marine Weather API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -63,7 +62,7 @@ except Exception as e:
 
 ## Usage
 
-The Marine Weather API documentation is found here: [https://docs.apiverve.com/ref/marineweather](https://docs.apiverve.com/ref/marineweather?utm_source=pypi&utm_medium=readme).
+The Marine Weather API documentation is found here: [https://docs.apiverve.com/ref/marineweather](https://docs.apiverve.com/ref/marineweather?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -113,21 +112,29 @@ print(result)
       "lon": -37.62424
     },
     "weather": {
-      "maxtempc": 26.1,
-      "maxtempf": 79,
-      "mintempc": 21.7,
-      "mintempf": 71.1,
-      "avgtempc": 25.4,
-      "avgtempf": 77.8,
-      "maxwindmph": 12,
-      "maxwindkph": 19.3,
-      "totalprecipmm": 2.36,
-      "totalprecipin": 0.09,
+      "date": "2026-09-17",
+      "avghumidity": 86,
+      "condition": "Moderate or heavy rain shower",
+      "uv": 5,
+      "sunrise": "05:53 AM",
+      "sunset": "06:08 PM",
+      "moonrise": "12:04 PM",
+      "moonset": "10:42 PM",
+      "maxtempc": 25.9,
+      "maxtempf": 78.6,
+      "mintempc": 21.3,
+      "mintempf": 70.3,
+      "avgtempc": 24.9,
+      "avgtempf": 76.8,
+      "maxwindmph": 15.4,
+      "maxwindkph": 24.7,
+      "totalprecipmm": 14.89,
+      "totalprecipin": 0.59,
       "totalsnowcm": 0,
-      "avgviskm": 9.5,
-      "avgvismiles": 5,
-      "moonphase": "New Moon",
-      "moonillumination": 0
+      "avgviskm": 7.4,
+      "avgvismiles": 4,
+      "moonphase": "First Quarter",
+      "moonillumination": 42
     }
   }
 }
@@ -271,7 +278,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -282,12 +289,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
