@@ -35,6 +35,14 @@ declare module '@apiverve/marineweather' {
   }
   
   interface Weather {
+      date:             Date | null;
+      avghumidity:      number | null;
+      condition:        null | string;
+      uv:               number | null;
+      sunrise:          null | string;
+      sunset:           null | string;
+      moonrise:         null | string;
+      moonset:          null | string;
       maxtempc:         number | null;
       maxtempf:         number | null;
       mintempc:         number | null;
