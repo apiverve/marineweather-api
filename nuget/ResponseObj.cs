@@ -50,6 +50,30 @@ namespace APIVerve.API.MarineWeather
 
     public partial class Weather
     {
+        [JsonProperty("date")]
+        public DateTimeOffset? Date { get; set; }
+
+        [JsonProperty("avghumidity")]
+        public long? Avghumidity { get; set; }
+
+        [JsonProperty("condition")]
+        public string Condition { get; set; }
+
+        [JsonProperty("uv")]
+        public long? Uv { get; set; }
+
+        [JsonProperty("sunrise")]
+        public string Sunrise { get; set; }
+
+        [JsonProperty("sunset")]
+        public string Sunset { get; set; }
+
+        [JsonProperty("moonrise")]
+        public string Moonrise { get; set; }
+
+        [JsonProperty("moonset")]
+        public string Moonset { get; set; }
+
         [JsonProperty("maxtempc")]
         public double? Maxtempc { get; set; }
 
