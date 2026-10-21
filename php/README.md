@@ -1,6 +1,6 @@
 # Marine Weather API - PHP Package
 
-Marine Weather is a simple tool for getting marine weather data. It returns the current weather conditions in coordinates within the ocean and sea.
+Marine Weather fetches offshore weather conditions for any marine coordinates by latitude and longitude. Each response details high and low temperatures, maximum wind speeds, precipitation totals, humidity, UV index, and sunrise and sunset times.
 
 ## Installation
 
@@ -77,21 +77,29 @@ $client = new Client(
       "lon": -37.62424
     },
     "weather": {
-      "maxtempc": 22.9,
-      "maxtempf": 73.2,
-      "mintempc": 21.8,
-      "mintempf": 71.2,
-      "avgtempc": 22.5,
-      "avgtempf": 72.5,
-      "maxwindmph": 11.1,
-      "maxwindkph": 17.9,
-      "totalprecipmm": 3.29,
-      "totalprecipin": 0.13,
+      "date": "2026-09-17",
+      "avghumidity": 86,
+      "condition": "Moderate or heavy rain shower",
+      "uv": 5,
+      "sunrise": "05:53 AM",
+      "sunset": "06:08 PM",
+      "moonrise": "12:04 PM",
+      "moonset": "10:42 PM",
+      "maxtempc": 25.9,
+      "maxtempf": 78.6,
+      "mintempc": 21.3,
+      "mintempf": 70.3,
+      "avgtempc": 24.9,
+      "avgtempf": 76.8,
+      "maxwindmph": 15.4,
+      "maxwindkph": 24.7,
+      "totalprecipmm": 14.89,
+      "totalprecipin": 0.59,
       "totalsnowcm": 0,
-      "avgviskm": 9.9,
-      "avgvismiles": 6,
-      "moonphase": "Waning Crescent",
-      "moonillumination": 16
+      "avgviskm": 7.4,
+      "avgvismiles": 4,
+      "moonphase": "First Quarter",
+      "moonillumination": 42
     }
   }
 }
@@ -104,11 +112,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/marineweather?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/marineweather?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/marineweather?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/marineweather?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/marineweather?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/marineweather?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
