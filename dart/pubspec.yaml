@@ -1,0 +1,16 @@
+name: apiverve_marineweather
+description: "Marine Weather fetches offshore weather conditions for any marine coordinates by latitude and longitude. Each response details high and low temperatures, maximum wind speeds, precipitation totals, humidity, UV index, and sunrise and sunset times."
+version: 1.2.5
+homepage: https://apiverve.com/marketplace/marineweather?utm_source=dart&utm_medium=referral&utm_content=homepage
+repository: https://github.com/apiverve/marineweather-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
